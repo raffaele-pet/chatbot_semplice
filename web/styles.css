@@ -1,0 +1,74 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.chat-container {
+    width: 900px;  /* Larghezza del container */
+    max-width: 90%;
+    height: 80vh;  /* Aumentata l'altezza della finestra */
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;  /* Posizione relativa per i figli fissi */
+}
+
+.chat-box {
+    flex-grow: 1;
+    padding: 10px;
+    overflow-y: auto;
+    border-bottom: 1px solid #ddd;
+    max-height: calc(80vh - 80px);  /* Regola l'altezza massima in base alla finestra */
+}
+
+.message {
+    margin-bottom: 10px;
+}
+
+.message strong {
+    font-weight: bold;
+}
+
+#chat-form {
+    display: flex;
+    border-top: 1px solid #ddd;
+    padding: 10px;
+    background-color: #fafafa;
+    position: absolute;
+    bottom: 0;  /* Aderisce al fondo della chat-container */
+    left: 0;
+    right: 0;
+    width: 100%;
+}
+
+#user-input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 15%;  /* Il pulsante ora occupa il 15% della barra */
+    margin-right: 20px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
